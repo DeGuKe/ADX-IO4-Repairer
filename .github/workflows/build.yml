@@ -1,0 +1,26 @@
+name: Windows build and decode test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+      - name: Build bridge
+        shell: cmd
+        run: scripts\build.cmd
+      - name: Decode captured HID reports
+        shell: pwsh
+        run: python tools\verify.py --bridge dist\adx_io4_bridge.dll tests\fixtures\capture.jsonl
+      - name: Upload bridge artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: adx_io4_bridge-windows-x64
+          path: dist/adx_io4_bridge.dll

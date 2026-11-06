@@ -1,0 +1,5 @@
+# Historical verified binaries and configurations
+00263fe9eb5bcdd849f37474d11caaf8b18859c5939b1d1b629af3692a3bd59a  adx_io4_bridge-1.0.dll
+b6eba97ad989fed70d5977c94be4658ba697738d286b5e80a8a3bebf591ce07f  adx_io4_bridge-1.1-pc-home.dll
+2e4d7f70627a38cb596594a9995ec466a8ffaab42ad034d5abcd2d7213077e0c  mai2.ini-before-pc-home-touch-fix
+1ca7311bde5b5ee3b0022ce7f38759bdb1ffd4099c2a8501aa0692746526cacc  mai2.ini-after-pc-home-touch-fix
